@@ -1,0 +1,32 @@
+{% extends 'ProyectoWebApp/base.html' %}
+
+ {% load static %}
+
+ {% block content %}
+
+ <div class="container-fluid" id="tienda_container">
+
+    <div class="row">
+  
+    {% for producto in productos %}
+  
+        <div class="col-md-3" id="card" >
+        
+            <div class="card" style="width: 18rem;">
+                <img src="{{producto.imagen.url}}" class="card-img-top m" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{producto.nombre}}</h5>
+                  <p class="card-text">{{producto.precio}}&nbsp;$</p>
+                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                </div>
+            </div>
+    
+        </div>
+
+    {% endfor %}
+
+    </div>
+</div>
+
+ {% endblock %}
+
