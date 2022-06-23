@@ -37,9 +37,10 @@
                 </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a href="./templates/register.html"><button class="btn btn-primary me-md-2"
+                <a href="#"><button class="btn btn-primary me-md-2"
                         type="button">Registrate</button></a>
-                <a href="./templates/login.html"><button class="btn btn-primary" type="button">Iniciar Sesión</button></a>
+                <a class="{% if request.path == '/login' %}active{%endif%}" href="{% url 'Login'%}"><button class="btn btn-primary" 
+                    type="button">Iniciar Sesión</button></a>
             </div>
 
         </div>
