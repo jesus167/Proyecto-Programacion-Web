@@ -63,17 +63,18 @@
   
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form id="formulario_login">
+              <form id="formulario_login" method="post" action="{% {% url 'login' %}%}">
+                {% csrf_token %}
   
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" for="emailog" id="email" class="form-control" placeholder="Correo electronico"/>
+                  <input type="email" name="mail" for="emailog" id="email" class="form-control" placeholder="Correo electronico"/>
                   <label class="form-label" id="emailOK" for="form3Example3"></label>    
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" for="passlog" id="password" class="form-control" placeholder="Password"/>
+                  <input type="password" name="password" for="passlog" id="password" class="form-control" placeholder="Password"/>
                   <label class="form-label" id="passwordOK" for="form3Example4"></label>
                 </div>
   

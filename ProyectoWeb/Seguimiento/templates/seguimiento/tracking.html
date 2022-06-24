@@ -1,0 +1,74 @@
+{% extends 'ProyectoWebApp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+    <!--Contenido Cambiante-->
+    <div class="card mb-6">
+        <img src="{% static './galeria/img/truck_tracking.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+        <div class="card-body">
+            <!--- Barra buscadora de código de rastreo -->
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Número de tracking" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+        
+        </div>
+      </div>
+
+    <br>
+    <!--- Resultados de rastreo por código indicado -->
+    <div class="container-fluid">
+        <article class="card mb-6">
+            <header class="card-header"> Mis ordenes y seguimiento </header>
+            <div class="card-body">
+                <h6> #000123456789 </h6>
+                <article class="card">
+                    <div class="card-body row">
+                        <div class="col"> <strong>Tiempo estimado de entrega:</strong> <br>13 nov 2022 </div>
+                        <div class="col"> <strong>Shipping:</strong> <br> Blackexpress | +569555222777 </div>
+                        <div class="col"> <strong>Estado:</strong> <br> En camino </div>
+                        <div class="col"> <strong>Tracking #:</strong> <br> 000123456789 </div>
+                    </div>
+                </article>
+                <!--- Resumen de productos en lacompra -->
+                <ul class="row">
+                    <li class="col-md-4">
+                        <figure class="itemside mb-3">
+                            <div class="aside"><img src="{% static './galeria/img/Suculenta_mini.jpg' %}" class="img-sm border"></div>
+                            <figcaption class="info align-self-center">
+                                <p class="title">Bugambilia maceta pequeña <br> Cantidad: 1 </p> <span
+                                    class="text-muted">Precio: $8.990.- </span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="col-md-4">
+                        <figure class="itemside mb-3">
+                            <div class="aside"><img src="{% static './galeria/img/Rosa_maceta.jpg' %}" class="img-sm border"></div>
+                            <figcaption class="info align-self-center">
+                                <p class="title">Rosa en maceta <br> Cantidad: 1 </p> <span class="text-muted">Precio:
+                                    $6.950.- </span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="col-md-4">
+                        <figure class="itemside mb-3">
+                            <div class="aside"><img src="{% static './galeria/img/Suculenta_mini.jpg' %}" class="img-sm border"></div>
+                            <figcaption class="info align-self-center">
+                                <p class="title">Mini Suculenta <br> Cantidad: 1 </p> <span class="text-muted">Precio:
+                                    $3.250.- </span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+        </article>
+    </div>
+    <div class="b-example-divider"></div>
+
+    {% endblock %}
