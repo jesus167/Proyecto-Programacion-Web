@@ -31,15 +31,16 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link {% if request.path == '/tienda' %}active{%endif%}" aria-current="page" href="{% url 'Tienda'%}">Tienda</a>
-                    <a class="nav-link" href="./templates/tracking.html">Sigue tu compra</a>
+                    <a class="nav-link {% if request.path == '/tracking' %}active{%endif%}" href="{% url 'Seguimiento'%}">Sigue tu compra</a>
                     <a class="nav-link" href="./templates/donacion.html">Donaciones</a>
                     <a class="nav-link" href="./templates/contacto.html">Contacto</a>
                 </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a href="./templates/register.html"><button class="btn btn-primary me-md-2"
+                <a class="{% if request.path == '/registro' %}active{%endif%}" href="{% url 'Registro' %}"><button class="btn btn-primary me-md-2"
                         type="button">Registrate</button></a>
-                <a href="./templates/login.html"><button class="btn btn-primary" type="button">Iniciar Sesión</button></a>
+                <a class="{% if request.path == '/login' %}active{%endif%}" href="{% url 'Login' %}"><button class="btn btn-primary" 
+                    type="button">Iniciar Sesión</button></a>
             </div>
 
         </div>
