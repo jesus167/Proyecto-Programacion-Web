@@ -28,8 +28,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#Envvio de mensajes
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
+
+
+# Redirect de login
+
 LOGIN_REDIRECT_URL = 'Home'
 LOGOUT_REDIRECT_URL = 'Home'
+
 # Application definition
 
 INSTALLED_APPS = [
