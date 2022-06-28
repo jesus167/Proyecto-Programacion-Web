@@ -37,10 +37,19 @@
                 </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                {% if user.is_authenticated%}
+                    <a href="#"><button class="btn btn-primary me-md-2"
+                    type="button">{{ user.username }}</button></a>
+                    <a href="{% url 'logout' %}"><button class="btn btn-primary" 
+                    type="button">Cerrar sesión</button></a>
+
+                {% else %}
                 <a class="{% if request.path == '/registro' %}active{%endif%}" href="{% url 'Registro' %}"><button class="btn btn-primary me-md-2"
                         type="button">Registrate</button></a>
                 <a class="{% if request.path == '/login' %}active{%endif%}" href="{% url 'Login' %}"><button class="btn btn-primary" 
                     type="button">Iniciar Sesión</button></a>
+
+                {% endif %}
             </div>
 
         </div>
@@ -59,9 +68,9 @@
     <div class="container">
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
-                <li class="nav-item"><a href="./templates/tienda.html" class="nav-link px-2 text-muted">Tienda</a></li>
-                <li class="nav-item"><a href="./templates/tracking.html" class="nav-link px-2 text-muted">Sigue tu compra</a></li>
+                <li class="nav-item"><a href="{% url 'Home' %}" class="nav-link px-2 text-muted">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted {% if request.path == '/tienda' %}active{%endif%}" href="{% url 'Tienda'%}">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted {% if request.path == '/tracking' %}active{%endif%}" href="{% url 'Seguimiento'%}"">Sigue tu compra</a></li>
                 <li class="nav-item"><a href="./templates/donacion.html" class="nav-link px-2 text-muted">Donaciones</a></li>
                 <li class="nav-item"><a href="./templates/contacto.html" class="nav-link px-2 text-muted">Contacto</a></li>
             </ul>

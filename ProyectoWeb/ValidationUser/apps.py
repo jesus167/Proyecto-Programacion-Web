@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RegistrousuarioConfig(AppConfig):
+class ValidationuserConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'RegistroUsuario'
+    name = 'ValidationUser'
