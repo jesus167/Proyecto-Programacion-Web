@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'Tienda',
     'Contacto',
     'Login',
-    'RegistroUsuario',
     'Seguimiento',
+    'RegistroUsuario',
 ]
 
 MIDDLEWARE = [
