@@ -37,10 +37,20 @@
                 </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a class="" href="#"><button class="btn btn-primary me-md-2"
+                {% if user.is_authenticated%}
+
+                    <a href="#"><button class="btn btn-primary me-md-2"
+                    type="button">{{ user.username }}</button></a>
+                    <a href="{% url 'logout' %}"><button class="btn btn-primary" 
+                    type="button">Cerrar sesión</button></a>
+
+                {% else %}
+                <a class="{% if request.path == '/registro' %}active{%endif%}" href="{% url 'Registro' %}"><button class="btn btn-primary me-md-2"
                         type="button">Registrate</button></a>
                 <a class="{% if request.path == '/login' %}active{%endif%}" href="{% url 'Login' %}"><button class="btn btn-primary" 
                     type="button">Iniciar Sesión</button></a>
+
+                {% endif %}
             </div>
 
         </div>

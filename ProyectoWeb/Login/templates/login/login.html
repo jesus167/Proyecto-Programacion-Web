@@ -63,34 +63,34 @@
     
             <div class="card bg-glass">
               <div class="card-body px-4 py-5 px-md-5">
-                <form id="formulario_login" method="post" action="">
-                  {% csrf_token %}
-    
-                  <!-- Email input -->
-                  <div class="form-outline mb-4">
-                    <input type="text" name="username" for="emailog" id="email" class="form-control" placeholder="Nombre de Usuario"/>
-                    <label class="form-label" id="emailOK" for="form3Example3"></label>    
-                  </div>
+                  <form id="formulario_login" method="post" action="">
+                    {% csrf_token %}
+      
+                    <!-- Username input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" name="username" id="username" class="form-control" placeholder="Nombre de Usuario"/>
+                      <label class="form-label" id="username" for="form3Example3"></label>    
+                    </div>
 
-                  <!-- Password input -->
-                  <div class="form-outline mb-4">
-                    <input type="password" name="password" for="passlog" id="password" class="form-control" placeholder="Password"/>
-                    <label class="form-label" id="passwordOK" for="form3Example4"></label>
-                  </div>
-    
-    
-                  <!-- Submit button -->
-                  <button type="submit" id="boton_login" class="form-outline btn btn-primary btn-block mb-4 w-100">
-                    Iniciar
-                  </button>
-    
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <input type="password" name="password" for="passlog" id="password" class="form-control" placeholder="Password"/>
+                      <label class="form-label" id="passwordOK" for="form3Example4"></label>
+                    </div>
+      
+                  
+                    <!-- Submit button -->
+                    <button type="submit" id="boton_login" class="form-outline btn btn-primary btn-block mb-4 w-100">
+                      Iniciar
+                    </button>
+                  </form>
                   <!-- Register buttons -->
                   <div class="text-center">
                       <p class="small mb-5 pb-lg-2"><a class="text-muted" href="./recover_login.html">¿Olvidaste tu clave?</a></p>
                       <p>¿No tienes cuenta? <a href="register.html" class="link-info">Registrate aqui</a></p>
 
                   </div>
-                </form>
+                
               </div>
             </div>
           </div>
