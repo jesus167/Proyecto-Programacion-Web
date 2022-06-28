@@ -6,6 +6,6 @@ from . import views
 
 urlpatterns = [
     
-    path('', views.login, name="Login"),
+    path('', views.login_fun, name="Login"),
     
 ]
