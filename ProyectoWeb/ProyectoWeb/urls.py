@@ -22,5 +22,4 @@ urlpatterns = [
     path('tienda/', include('Tienda.urls')),
     path('login/', include('Login.urls')),
     path('tracking/', include('Seguimiento.urls')),
-    path('registro/', include('RegistroUsuario.urls'))
 ]
