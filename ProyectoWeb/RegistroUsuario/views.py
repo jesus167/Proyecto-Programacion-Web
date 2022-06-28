@@ -4,9 +4,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.views.generic import View
 
+
 # Create your views here.
 
 
+<<<<<<< HEAD
 
 def registro( request):
     form = UserCreationForm()
@@ -23,3 +25,9 @@ def registro_final(request):
     else:
         messages.error(request, "Error al registrar usuario")
     
+=======
+def registro(request):
+
+
+    return render(request, "registro/registro.html")
+>>>>>>> 128f23bed87f8a9a4e0bea8c474957b0d83c30c8
