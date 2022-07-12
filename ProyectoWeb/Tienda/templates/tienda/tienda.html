@@ -4,34 +4,57 @@
 
  {% block content %}
 
- <div class="container-fluid" id="tienda_container">
+ <div class="container-fluid">
 
     <div class="row">
-  
-    {% for producto in productos %}
-  
-        <div class="col-md-3" id="card" >
-        
-            <div class="card" style="width: 18rem;">
-                <img src="{{producto.imagen.url}}" class="card-img-top m" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{producto.nombre}}</h5>
-                  {% if user.is_authenticated %}
-                  <p class="card-text">Oferta!! {{producto.Calc_descuento}}&nbsp;$</p>
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                  {% else %}
-                  <p class="card-text">{{producto.precio}}&nbsp;$</p>
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                  {% endif %}
+        <div class="col-8">
+            <div class="row" style="padding: 10px 0;">
+                <div class="col-12">
+                    <div class="row">
+                        {% for producto in productos %}
+                        <div class="col-6">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{producto.imagen.url}}" class="card-img-top m" alt="..."
+                                <div class="card-body">
+                                    <h5 class="card-title">{{producto.nombre}}</h5>
+                                    {% if user.is_authenticated %}
+                                    <p class="card-text">Oferta!! {{producto.Calc_descuento}}&nbsp;$</p>
+                                    <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Añadir al carrito</a>
+                                    {% else %}
+                                    <p class="card-text">&nbsp;${{producto.precio}}</p>
+                                    <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Añadir al carrito</a>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-    
         </div>
-
-    {% endfor %}
-
+        <div class="col-4">
+            {% include "tienda/carrito.html" %}
+        </div>
     </div>
 </div>
 
+
  {% endblock %}
 
+
+
+{% comment %} 
+<div class="card" style="width: 18rem;">
+    <img src="{{producto.imagen.url}}" class="card-img-top m" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{producto.nombre}}</h5>
+      {% if user.is_authenticated %}
+      <p class="card-text">Oferta!! {{producto.Calc_descuento}}&nbsp;$</p>
+      <a href="#" class="btn btn-primary">Añadir al carrito</a>
+      {% else %}
+      <p class="card-text">&nbsp;${{producto.precio}}</p>
+      <a href="#" class="btn btn-primary">Añadir al carrito</a>
+      {% endif %}
+    </div>
+</div>  {% endcomment %}

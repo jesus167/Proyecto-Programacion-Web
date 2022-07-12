@@ -10,7 +10,7 @@ def registro(request):
     data = {'form': CreateUserForm}
     # Validar metodo Post
     if request.method == 'POST':
-        formulario = CreateUserForm(request.POST)
+        formulario = CreateUserForm(data = request.POST)
         if formulario.is_valid():
             formulario.save()
             # Autenticar Usuario
@@ -18,9 +18,9 @@ def registro(request):
             password = formulario.cleaned_data['password1']
             user = authenticate(username = username, password= password)
             login(request, user)
+            messages.success(request, "Te has registrado correctamente")
             return redirect(to='Home')
         else:
-            messages.success(request, "Hubo un error")
-            print("hubo un error")
-
+            messages.success(request, "Debe llenar todos los campos solicitados")
+        data['form'] = formulario
     return render(request, 'registro/register.html', data)

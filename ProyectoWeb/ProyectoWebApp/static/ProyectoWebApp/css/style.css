@@ -37,7 +37,9 @@ p{
     margin-top: 40px;
     text-align: justify;
 }
-
+#formulario{
+    font-size: 15px;
+}
 /*  ----- ----- Estilos para nav bar, boton activo  -----   -----   */
   .active{
     font-size: 17px;
@@ -79,13 +81,4 @@ p{
 	.formulario__btn {
 		width: 100%;
 	}
-}
-#tienda_container{
-    margin-top: 10px;
-    padding: 50px;
-}
-#card{
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
