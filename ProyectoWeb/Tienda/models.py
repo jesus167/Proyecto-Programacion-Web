@@ -25,8 +25,7 @@ class Producto(models.Model):
     disponibilidad = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
-    descuento = models.FloatField(default=0)
-    precio_desc = models.IntegerField(default=0)
+
 
     class Meta:
         verbose_name = "Producto"
@@ -34,6 +33,3 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.nombre
-
-    def Calc_descuento(self):
-        return int(self.precio * self.descuento)

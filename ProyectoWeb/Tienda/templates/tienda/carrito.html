@@ -30,8 +30,13 @@
         </tr>
         {% endif %}
         <tr>
+            {% if user.is_authenticated %}
+            <th scope="row">Total: </th>
+            <td colspan="2">$ {{Calc_descuento}}</td>
+            {% else %}
             <th scope="row">Total: </th>
             <td colspan="2">$ {{total_carrito}}</td>
+            {% endif %}
         </tr>
 
         </tbody>
