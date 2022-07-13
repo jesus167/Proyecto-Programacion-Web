@@ -45,5 +45,5 @@
 </div>
 <div class="row text-center">
     <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a> </div>
-    <div class="col-6"><a href="#" class="btn btn-primary">Guardar</a> </div>
+    <div class="col-6"><a class="btn btn-primary {% if request.path == '/tracking' %}active{%endif%}" href="{% url 'Seguimiento'%}">Guardar</a> </div>
 </div>

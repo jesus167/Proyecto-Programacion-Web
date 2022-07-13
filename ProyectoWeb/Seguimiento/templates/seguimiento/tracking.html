@@ -6,7 +6,7 @@
     
     <!--Contenido Cambiante-->
     <div class="card mb-6">
-        <img src="{% static './galeria/img/truck_tracking.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+        <img src="{% static 'ProyectoWebApp/img/truck_tracking.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
         <div class="card-body">
             <!--- Barra buscadora de código de rastreo -->
             <nav class="navbar navbar-light bg-light">
@@ -27,46 +27,34 @@
         <article class="card mb-6">
             <header class="card-header"> Mis ordenes y seguimiento </header>
             <div class="card-body">
-                <h6> #000123456789 </h6>
-                <article class="card">
-                    <div class="card-body row">
-                        <div class="col"> <strong>Tiempo estimado de entrega:</strong> <br>13 nov 2022 </div>
-                        <div class="col"> <strong>Shipping:</strong> <br> Blackexpress | +569555222777 </div>
-                        <div class="col"> <strong>Estado:</strong> <br> En camino </div>
-                        <div class="col"> <strong>Tracking #:</strong> <br> 000123456789 </div>
-                    </div>
-                </article>
-                <!--- Resumen de productos en lacompra -->
-                <ul class="row">
-                    <li class="col-md-4">
-                        <figure class="itemside mb-3">
-                            <div class="aside"><img src="{% static './galeria/img/Suculenta_mini.jpg' %}" class="img-sm border"></div>
-                            <figcaption class="info align-self-center">
-                                <p class="title">Bugambilia maceta pequeña <br> Cantidad: 1 </p> <span
-                                    class="text-muted">Precio: $8.990.- </span>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="col-md-4">
-                        <figure class="itemside mb-3">
-                            <div class="aside"><img src="{% static './galeria/img/Rosa_maceta.jpg' %}" class="img-sm border"></div>
-                            <figcaption class="info align-self-center">
-                                <p class="title">Rosa en maceta <br> Cantidad: 1 </p> <span class="text-muted">Precio:
-                                    $6.950.- </span>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="col-md-4">
-                        <figure class="itemside mb-3">
-                            <div class="aside"><img src="{% static './galeria/img/Suculenta_mini.jpg' %}" class="img-sm border"></div>
-                            <figcaption class="info align-self-center">
-                                <p class="title">Mini Suculenta <br> Cantidad: 1 </p> <span class="text-muted">Precio:
-                                    $3.250.- </span>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Número de Pedido</th>
+                        <th scope="col">Fecha Compra</th>
+                        <th scope="col">Enviar a</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Total Compra</th>
+                        <th scope="col">Detalle</th>     
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">21354</th>
+                        <td>10/07/2022</td>
+                        <td>Usuario</td>
+                        <td>En preparación</td>
+                        <td>$ 100.000-.</td>
+                        <td><a href="#">Ver detalle</a></td>
+                        
+                      </tr>
+                 
+                    </tbody>
+                  </table>
 
+
+            </div>
+                
         </article>
     </div>
     <div class="b-example-divider"></div>
