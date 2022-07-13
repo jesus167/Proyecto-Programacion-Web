@@ -25,6 +25,7 @@ def contacto(request):
                 email.send()
                 
                 return redirect("/contacto/?valido")
+                
             except:
                 return redirect("/contacto/?novalido")
         
