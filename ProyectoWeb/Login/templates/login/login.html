@@ -87,7 +87,7 @@
                   <!-- Register buttons -->
                   <div class="text-center">
                       <p class="small mb-5 pb-lg-2"><a class="text-muted" href="./recover_login.html">¿Olvidaste tu clave?</a></p>
-                      <p>¿No tienes cuenta? <a href="register.html" class="link-info">Registrate aqui</a></p>
+                      <p>¿No tienes cuenta? <a  class="link-info {% if request.path == '/registro' %}active{%endif%}" href="{% url 'Registro' %}">Registrate aqui</a></p>
 
                   </div>
                 

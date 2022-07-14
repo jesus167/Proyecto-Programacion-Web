@@ -1,0 +1,37 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    
+
+  <div class="contenedorFormulario mb-3">
+
+    {% if "valido" in request.GET %}
+
+        <p style="color: white; text-align: center;">El mensaje a sido enviado, en breve te contactaremos</p>
+
+    {% endif %}
+
+    <form action="" method="POST"> 
+      {% csrf_token %}
+
+      
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+        <input class="form-control" type="text" name="nombre" aria-label="readonly input example" placeholder="Nombre">
+        <label for="exampleFormControlInput1" class="form-label">Correo</label>
+        <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="usuario@ejemplo.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+        <textarea class="form-control" name="contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <input type="submit" idvalue="Enviar" class="btn btn-primary w-25">
+    
+    </form>
+  </div>
+
+{% endblock %}

@@ -32,8 +32,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link {% if request.path == '/tienda' %}active{%endif%}" aria-current="page" href="{% url 'Tienda'%}">Tienda</a>
                     <a class="nav-link {% if request.path == '/tracking' %}active{%endif%}" href="{% url 'Seguimiento'%}">Sigue tu compra</a>
-                    <a class="nav-link" href="./templates/donacion.html">Donaciones</a>
-                    <a class="nav-link" href="./templates/contacto.html">Contacto</a>
+                    <a class="nav-link {% if request.path == '/contacto' %}active{%endif%}" href="{% url 'Contacto'%}">Contacto</a>
                 </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -70,9 +69,8 @@
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="{% url 'Home' %}" class="nav-link px-2 text-muted">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link px-2 text-muted {% if request.path == '/tienda' %}active{%endif%}" href="{% url 'Tienda'%}">Tienda</a></li>
-                <li class="nav-item"><a class="nav-link px-2 text-muted {% if request.path == '/tracking' %}active{%endif%}" href="{% url 'Seguimiento'%}"">Sigue tu compra</a></li>
-                <li class="nav-item"><a href="./templates/donacion.html" class="nav-link px-2 text-muted">Donaciones</a></li>
-                <li class="nav-item"><a href="./templates/contacto.html" class="nav-link px-2 text-muted">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted {% if request.path == '/tracking' %}active{%endif%}" href="{% url 'Seguimiento'%}">Sigue tu compra</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted {% if request.path == '/contacto' %}active{%endif%}" href="{% url 'Contacto'%}">Contacto</a></li>
             </ul>
             <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
         </footer>
